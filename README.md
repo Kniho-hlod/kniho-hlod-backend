@@ -4,6 +4,8 @@ REST API backend for the **kniho-hlod** book lending application.
 
 ## Tech Stack
 
+funguj
+
 - **Runtime:** Node.js 22 + TypeScript
 - **Framework:** Express (via `@eleansphere/be-core`)
 - **ORM:** Sequelize 6 + PostgreSQL (`pg`)
