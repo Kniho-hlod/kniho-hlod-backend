@@ -19,7 +19,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@eleansphere/be-core": "^1.7.0",
+    "@eleansphere/be-core": "^1.10.0",
     "@kniho-hlod/kniho-hlod-service": "^1.15.0",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.6.1",
