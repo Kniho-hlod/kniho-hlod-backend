@@ -21,13 +21,13 @@
   "dependencies": {
     "@eleansphere/be-core": "^1.10.0",
     "@kniho-hlod/kniho-hlod-service": "^1.15.0",
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^6.0.0",
     "dotenv": "^16.6.1",
     "pino": "^10.3.1",
     "sequelize": "^6.37.6"
   },
   "devDependencies": {
-    "@types/bcrypt": "^5.0.2",
+    "@types/bcrypt": "^6.0.0",
     "@types/express": "^4.17.25",
     "@types/node": "^22.18.6",
     "nodemon": "^3.1.9",
