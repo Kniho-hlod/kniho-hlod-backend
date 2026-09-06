@@ -11,7 +11,7 @@
     "dev": "nodemon src/index.ts",
     "build": "npm install && tsc",
     "format": "prettier --write src/",
-    "core-update": "npm install @eleansphere/be-core@latest",
+    "core-update": "npm install @eleansphere/be-core@latest @eleansphere/entity-core@latest",
     "service-update": "npm install @kniho-hlod/kniho-hlod-service@latest"
   },
   "keywords": [],
@@ -19,8 +19,9 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@eleansphere/be-core": "^1.10.0",
-    "@kniho-hlod/kniho-hlod-service": "^1.15.0",
+    "@eleansphere/be-core": "^1.12.0",
+    "@eleansphere/entity-core": "^1.2.0",
+    "@kniho-hlod/kniho-hlod-service": "^1.17.0",
     "bcrypt": "^6.0.0",
     "dotenv": "^16.6.1",
     "pino": "^10.3.1",
