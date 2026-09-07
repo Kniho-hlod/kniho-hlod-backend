@@ -20,8 +20,8 @@
   "description": "",
   "dependencies": {
     "@eleansphere/be-core": "^1.12.0",
-    "@eleansphere/entity-core": "^1.3.0",
-    "@kniho-hlod/kniho-hlod-service": "^1.17.0",
+    "@eleansphere/entity-core": "^2.0.0",
+    "@kniho-hlod/kniho-hlod-service": "^1.19.0",
     "bcrypt": "^6.0.0",
     "dotenv": "^16.6.1",
     "pino": "^10.3.1",
