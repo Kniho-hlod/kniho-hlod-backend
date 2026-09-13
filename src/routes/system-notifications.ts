@@ -1,35 +1,17 @@
 // src/routes/system-notifications.ts
-import { Application, Request, Response, NextFunction, RequestHandler } from 'express';
-import { ModelStatic, Model, Op } from 'sequelize';
+import { Application, RequestHandler } from 'express';
+import { ModelStatic, Model } from 'sequelize';
 import { createCrudRouter, generateId } from '@eleansphere/be-core';
 import { makeRequestLogger } from '../middleware/request-logger';
-import { logger } from '../logger';
 
 export function registerSystemNotificationRoutes(
   app: Application,
   SystemNotificationModel: ModelStatic<Model>,
   extractUser: RequestHandler
 ): void {
-  // GET /active is public — no JWT required
-  app.get(
-    '/api/system-notifications/active',
-    async (_req: Request, res: Response, next: NextFunction) => {
-      try {
-        const now = new Date();
-        const records = await SystemNotificationModel.findAll({
-          where: {
-            activeFrom: { [Op.lte]: now },
-            activeTo: { [Op.gte]: now },
-          },
-          order: [['activeFrom', 'ASC']],
-        });
-        res.json(records.map((r) => r.toJSON()));
-      } catch (err) {
-        logger.error({ err }, 'Failed to fetch active system notifications');
-        next(err);
-      }
-    }
-  );
+  // Public GET /active is mounted by be-core itself (systemNotificationEntity's `activeRange` —
+  // see kniho-hlod-service) even though this model is registered as `custom` below; no route
+  // code needed for it here.
 
   // CRUD for admin — protected by JWT
   app.use('/api/system-notifications', extractUser);
